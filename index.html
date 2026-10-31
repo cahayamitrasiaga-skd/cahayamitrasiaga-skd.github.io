@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>KSP Cahaya Mitra Siaga (SKD)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    
+<!-- HEADER -->
+<header class="header">
+
+    <a href="#beranda" class="logo">
+        KSP cahaya Mitra Siaga (SKD)
+    </a>
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Buka menu navigasi"
+        aria-controls="menuNavigasi"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
+    
+<nav id="menuNavigasi" class="nav-menu">
+    <a href="#beranda">Beranda</a>
+    <a href="#profil">Profil</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#simulasi">Simulasi</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+</nav>
+
+
+</header>
+
+
+    <!-- BERANDA -->
+    <section class="hero" id="beranda">
+        <h1>
+            Melangkah Bersama,
+            Kita Pasti Bisa,Tumbuh Sehat Sejahtera! 
+        </h1>
+
+        <p>
+            Solusi simpan pinjam yang
+            profesional, aman, dan terpercaya.
+        </p>
+
+        <a href="#layanan" class="btn">
+            Lihat Layanan Kami
+        </a>
+    </section>
+
+    
+<!-- PROFIL KOPERASI -->
+<section class="profil" id="profil">
+
+    <div class="judul-section">
+        <span>PROFIL KELEMBAGAAN</span>
+        <h2>Tentang Koperasi Kami</h2>
+    </div>
+
+    <p class="deskripsi-profil">
+        Koperasi Simpan Pinjam berkomitmen
+        memberikan pelayanan kepada anggota
+        melalui pengelolaan simpanan dan
+        pinjaman yang profesional, transparan,
+        dan bertanggung jawab.
+    </p>
+
+    <div class="grid-profil">
+
+        <div class="kotak-profil">
+            <h3>Visi Koperasi</h3>
+            <p>
+                Menjadi koperasi yang sehat,
+                terpercaya, dan berkelanjutan
+                dalam meningkatkan
+                kesejahteraan anggota.
+            </p>
+        </div>
+
+        <div class="kotak-profil">
+            <h3>Misi Koperasi</h3>
+            <p>
+                Memberikan pelayanan berkualitas,
+                meningkatkan partisipasi anggota,
+                dan menerapkan tata kelola
+                koperasi yang baik.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="legalitas">
+        <h3>Informasi Kelembagaan</h3>
+        <p><strong>Nama:</strong>
+            [KSP Cahaya Mitra Siaga]</p>
+        <p><strong>Nomor Badan Hukum:</strong>
+            [AHU-0004740.AH.01.29 Tahun 2023]</p>
+        <p><strong>Alamat:</strong>
+            [Jl. Campuan Asri, Blok FF No. 39, Dalung Permai, Badung]</p>
+    </div>
+
+</section>
+
+
+    
+<!-- LAYANAN KOPERASI -->
+<section class="layanan" id="layanan">
+
+    <div class="judul-section">
+        <span>PRODUK DAN LAYANAN</span>
+        <h2>Layanan untuk Anggota</h2>
+    </div>
+
+    <div class="container-kartu">
+
+        <div class="kartu">
+            <div class="ikon-layanan">01</div>
+            <h3>Simpanan Anggota</h3>
+            <p>
+                Informasi mengenai produk
+                simpanan yang tersedia
+                sesuai ketentuan koperasi.
+            </p>
+            <a href="#kontak"
+               class="link-layanan">
+                Informasi Lebih Lanjut
+            </a>
+        </div>
+
+        <div class="kartu">
+            <div class="ikon-layanan">02</div>
+            <h3>Pinjaman Anggota</h3>
+            <p>
+                Fasilitas pinjaman bagi
+                anggota berdasarkan
+                persyaratan dan kebijakan
+                koperasi.
+            </p>
+            <a href="#simulasi"
+               class="link-layanan">
+                Simulasi Pinjaman
+            </a>
+        </div>
+
+        <div class="kartu">
+            <div class="ikon-layanan">03</div>
+            <h3>Konsultasi Keuangan</h3>
+            <p>
+                Informasi mengenai
+                pengelolaan keuangan
+                dan layanan keanggotaan.
+            </p>
+            <a href="#kontak"
+               class="link-layanan">
+                Hubungi Koperasi
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SIMULASI PINJAMAN -->
+<section class="simulasi" id="simulasi">
+
+    <h2>Simulasi Angsuran Pinjaman</h2>
+
+    <p>
+        Hitung estimasi angsuran
+        pinjaman koperasi.
+    </p>
+
+    <div class="form-simulasi">
+
+        <label for="jumlahPinjaman">
+            Jumlah Pinjaman (Rp)
+        </label>
+
+        <input
+            type="number"
+            id="jumlahPinjaman"
+            placeholder="Contoh: 10000000"
+            min="1"
+        >
+
+        <label for="jangkaWaktu">
+            Jangka Waktu (Bulan)
+        </label>
+
+        <select id="jangkaWaktu">
+            <option value="3">3 Bulan</option>
+            <option value="6">6 Bulan</option>
+            <option value="12" selected>
+                12 Bulan
+            </option>
+            <option value="24">24 Bulan</option>
+            <option value="36">36 Bulan</option>
+        </select>
+
+        <label for="bungaPinjaman">
+            Bunga Flat (% per Bulan)
+        </label>
+
+        <input
+            type="number"
+            id="bungaPinjaman"
+            value="0.75"
+            min="0"
+            step="0.01"
+        >
+
+        <button
+            type="button"
+            onclick="hitungAngsuran()"
+        >
+            Hitung Angsuran
+        </button>
+
+        <div id="hasilSimulasi"
+             aria-live="polite">
+        </div>
+
+    </div>
+</section>
+
+    <!-- KONTAK -->
+    <section class="kontak" id="kontak">
+        <h2>Hubungi Kami</h2>
+        <p>
+            Silakan hubungi kantor koperasi
+            untuk informasi lebih lanjut.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            &copy; 2026 Koperasi Simpan Pinjam.
+            All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

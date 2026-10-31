@@ -1,0 +1,643 @@
+
+/* PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #0e2a47;
+    line-height: 1.6;
+}
+
+/* HEADER DAN NAVIGASI */
+.header {
+    background: #0e2a47;
+    color: white;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #c9a227;
+}
+
+/* HALAMAN BERANDA */
+.hero {
+    background: linear-gradient(
+        135deg,
+        #0e2a47,
+        #1761a0
+    );
+    color: white;
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* TOMBOL */
+.btn {
+    display: inline-block;
+    background: #c9a227;
+    color: #0e2a47;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e0ba47;
+}
+
+/* PROFIL */
+.profil {
+    padding: 75px 8%;
+    text-align: center;
+    background: white;
+}
+
+.profil h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.profil p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* LAYANAN */
+.layanan {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.layanan h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.container-kartu {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kartu {
+    background: white;
+    padding: 35px 25px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px
+                rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.kartu:hover {
+    transform: translateY(-8px);
+}
+
+.kartu h3 {
+    margin-bottom: 15px;
+    color: #0e2a47;
+}
+
+/* KONTAK */
+.kontak {
+    padding: 70px 8%;
+    background: white;
+    text-align: center;
+}
+
+.kontak h2 {
+    margin-bottom: 15px;
+}
+
+/* FOOTER */
+footer {
+    background: #0e2a47;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 75px 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .kartu {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* SIMULASI PINJAMAN */
+.simulasi {
+    padding: 75px 8%;
+    background: #eaf0f7;
+    text-align: center;
+}
+
+.simulasi h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.form-simulasi {
+    background: white;
+    max-width: 520px;
+    margin: 30px auto 0;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px
+                rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.form-simulasi label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-simulasi input,
+.form-simulasi select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5df;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-simulasi button {
+    width: 100%;
+    background: #c9a227;
+    color: #0e2a47;
+    padding: 15px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-simulasi button:hover {
+    background: #e0ba47;
+}
+
+#hasilSimulasi {
+    margin-top: 25px;
+    line-height: 2;
+}
+
+#hasilSimulasi h3 {
+    color: #0e2a47;
+    margin-bottom: 10px;
+}
+
+/* ==================================
+   PERTEMUAN 4 - RESPONSIVE DESIGN
+================================== */
+
+/* Mencegah konten melebar */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header lebih profesional */
+.header {
+    position: relative;
+    z-index: 10;
+}
+
+.header .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #c9a227;
+}
+
+/* Tombol hamburger disembunyikan
+   pada layar laptop */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: white;
+    border: 1px solid #ffffff80;
+    border-radius: 8px;
+    font-size: 26px;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+/* Tampilan kartu layanan */
+.container-kartu {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 24px;
+}
+
+.kartu {
+    width: 100%;
+    min-width: 0;
+    border-top: 4px solid #c9a227;
+}
+
+/* Bagian kalkulator */
+.form-simulasi {
+    width: 100%;
+    max-width: 520px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    .container-kartu {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* SMARTPHONE */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 16px 5%;
+    }
+
+    .header .logo {
+        font-size: 15px;
+        max-width: 75%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #0e2a47;
+        padding: 18px 6% 24px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 12px 20px
+                    rgba(0,0,0,0.15);
+    }
+
+    .nav-menu.aktif {
+        display: flex;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 13px 0;
+        border-bottom: 1px solid
+            rgba(255,255,255,0.15);
+    }
+
+    .hero {
+        padding: 85px 6%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .profil,
+    .layanan,
+    .simulasi,
+    .kontak {
+        padding: 55px 6%;
+    }
+
+    .container-kartu {
+        grid-template-columns: 1fr;
+    }
+
+    .form-simulasi {
+        padding: 24px 18px;
+    }
+
+}
+
+/* HP BERUKURAN KECIL */
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .header .logo {
+        font-size: 13px;
+    }
+
+    .form-simulasi {
+        padding: 20px 14px;
+    }
+
+}
+
+/* ==================================
+   PERTEMUAN 5 - PROFIL DAN GALERI
+================================== */
+
+.judul-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.judul-section span {
+    display: block;
+    color: #b18c21;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.judul-section h2 {
+    font-size: 30px;
+    color: #0e2a47;
+}
+
+/* PROFIL */
+.deskripsi-profil {
+    max-width: 800px;
+    margin: 0 auto 35px;
+}
+
+.grid-profil {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.kotak-profil {
+    background: #f1f5fa;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    border-left: 4px solid #c9a227;
+}
+
+.kotak-profil h3 {
+    margin-bottom: 12px;
+}
+
+.legalitas {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.legalitas h3 {
+    margin-bottom: 15px;
+}
+
+/* LAYANAN */
+.ikon-layanan {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #0e2a47;
+    color: #c9a227;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+.link-layanan {
+    display: inline-block;
+    margin-top: 20px;
+    color: #15518b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.link-layanan:hover {
+    text-decoration: underline;
+}
+
+/* GALERI */
+.galeri {
+    background: #f5f7fa;
+    padding: 75px 8%;
+}
+
+.grid-galeri {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.item-galeri {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px
+                rgba(0,0,0,0.08);
+}
+
+.item-galeri img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.item-galeri h3 {
+    padding: 20px;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* FORMULIR KONTAK */
+.form-kontak {
+    max-width: 600px;
+    margin: 30px auto 0;
+    padding: 35px;
+    background: #f5f7fa;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.form-kontak label {
+    display: block;
+    font-weight: bold;
+    margin: 18px 0 8px;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5df;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.form-kontak button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: #c9a227;
+    color: #0e2a47;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-kontak button:hover {
+    background: #e0ba47;
+}
+
+#statusKontak {
+    margin-top: 15px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 900px) {
+    .grid-galeri {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .grid-profil,
+    .grid-galeri {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri {
+        padding: 55px 6%;
+    }
+
+    .judul-section h2 {
+        font-size: 25px;
+    }
+
+    .form-kontak {
+        padding: 24px 18px;
+    }
+
+    .item-galeri img {
+        height: 240px;
+    }
+}
