@@ -12,11 +12,29 @@
 <body>
 
     
+
+
 <!-- HEADER -->
 <header class="header">
 
     <a href="#beranda" class="logo">
-        KSP cahaya Mitra Siaga (SKD)
+
+        <img
+            src="images/logo-cms.png"
+            alt="Logo Koperasi"
+            class="logo-gambar"
+        >
+
+        <div class="logo-identitas">
+            <span class="logo-teks">
+                KSP CAHAYA MITRA SIAGA (SKD)
+            </span>
+
+            <span class="logo-subteks">
+                Koperasi Simpan Pinjam
+            </span>
+        </div>
+
     </a>
 
     <button
@@ -30,18 +48,17 @@
         ☰
     </button>
 
-    
-<nav id="menuNavigasi" class="nav-menu">
-    <a href="#beranda">Beranda</a>
-    <a href="#profil">Profil</a>
-    <a href="#layanan">Layanan</a>
-    <a href="#simulasi">Simulasi</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#kontak">Kontak</a>
-</nav>
-
+    <nav id="menuNavigasi" class="nav-menu">
+        <a href="#beranda">Beranda</a>
+        <a href="#profil">Profil</a>
+        <a href="#layanan">Layanan</a>
+        <a href="#simulasi">Simulasi</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
 
 </header>
+
 
 
     <!-- BERANDA -->
@@ -237,14 +254,106 @@
     </div>
 </section>
 
-    <!-- KONTAK -->
-    <section class="kontak" id="kontak">
-        <h2>Hubungi Kami</h2>
-        <p>
-            Silakan hubungi kantor koperasi
-            untuk informasi lebih lanjut.
+<!-- GALERI KEGIATAN -->
+<section class="galeri" id="galeri">
+
+    <div class="judul-section">
+        <span>DOKUMENTASI</span>
+        <h2>Galeri Kegiatan Koperasi</h2>
+    </div>
+
+    <div class="grid-galeri">
+
+        <div class="item-galeri">
+            <img
+                src="images/kegiatan-1.jpeg"
+                alt="Dokumentasi rapat anggota"
+                loading="lazy"
+            >
+            <h3>Kegiatan Sosial</h3>
+        </div>
+
+        <div class="item-galeri">
+            <img
+                src="images/kegiatan-2.jpeg"
+                alt="Dokumentasi pendidikan anggota"
+                loading="lazy"
+            >
+            <h3>Pendidikan Anggota</h3>
+        </div>
+
+        <div class="item-galeri">
+            <img
+                src="images/kegiatan-3.jpeg"
+                alt="Dokumentasi kegiatan sosial"
+                loading="lazy"
+            >
+            <h3>Diklat & Pelatihan Karyawan</h3>
+        </div>
+
+    </div>
+
+</section>
+
+    
+<!-- KONTAK -->
+<section class="kontak" id="kontak">
+
+    <div class="judul-section">
+        <span>HUBUNGI KAMI</span>
+        <h2>Informasi dan Konsultasi</h2>
+    </div>
+
+    <p>
+        Silakan isi formulir berikut
+        untuk menghubungi koperasi.
+    </p>
+
+    <form id="formKontak" class="form-kontak">
+
+        <label for="namaKontak">
+            Ari Raditya
+        </label>
+        <input
+            type="text"
+            id="namaKontak"
+            placeholder="Masukkan nama"
+            required
+        >
+
+        <label for="teleponKontak">
+            085190657257
+        </label>
+        <input
+            type="tel"
+            id="teleponKontak"
+            placeholder="Contoh: 081234567890"
+            required
+        >
+
+        <label for="pesanKontak">
+            Pesan
+        </label>
+        <textarea
+            id="pesanKontak"
+            rows="5"
+            placeholder="Tulis pesan Anda"
+            required
+        ></textarea>
+
+        <button type="submit">
+            Kirim melalui WhatsApp
+        </button>
+
+        <p id="statusKontak"
+           role="status"
+           aria-live="polite">
         </p>
-    </section>
+
+    </form>
+
+</section>
+
 
     <!-- FOOTER -->
     <footer>

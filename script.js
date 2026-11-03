@@ -83,12 +83,6 @@ function hitungAngsuran() {
             </strong>
         </p>
 
-        <p>
-            Total Pembayaran:
-            <strong>
-                ${formatRupiah(totalPembayaran)}
-            </strong>
-        </p>
     `;
 }
 
@@ -149,3 +143,67 @@ semuaLink.forEach(function (link) {
     });
 
 });
+
+// ==================================
+// PERTEMUAN 5 - FORMULIR KONTAK
+// ==================================
+
+// GANTI dengan nomor WhatsApp resmi koperasi
+// Format: 62 + nomor tanpa angka 0 di depan
+const nomorAdmin = "6285190657257";
+
+const formKontak =
+    document.getElementById("formKontak");
+
+formKontak.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+        const nama =
+            document.getElementById(
+                "namaKontak"
+            ).value.trim();
+
+        const telepon =
+            document.getElementById(
+                "teleponKontak"
+            ).value.trim();
+
+        const pesan =
+            document.getElementById(
+                "pesanKontak"
+            ).value.trim();
+
+        const status =
+            document.getElementById(
+                "statusKontak"
+            );
+
+        if (!nama || !telepon || !pesan) {
+            status.textContent =
+                "Mohon lengkapi formulir.";
+            return;
+        }
+
+        // Pesan yang akan ditampilkan
+        // di WhatsApp
+        const isiPesan =
+            "Halo Admin Koperasi,\n\n" +
+            "Nama: " + nama + "\n" +
+            "WhatsApp: " + telepon + "\n" +
+            "Pesan: " + pesan;
+
+        const url =
+            "https://wa.me/" +
+            nomorAdmin +
+            "?text=" +
+            encodeURIComponent(isiPesan);
+
+        status.textContent =
+            "Membuka WhatsApp...";
+
+        window.location.href = url;
+    }
+);
